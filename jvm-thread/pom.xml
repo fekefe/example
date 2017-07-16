@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>ggh-parent</artifactId>
+        <groupId>com.ggh</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>jvm-thread</artifactId>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.ggh</groupId>
+            <artifactId>ggh-jdk</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+</project>

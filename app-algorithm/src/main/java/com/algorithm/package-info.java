@@ -3,7 +3,7 @@
  */
 package com.algorithm;
 /*
-最小子数组
-归并
-动态规划
+dynamic 动态规划
+subarray 最小子数组
+merge 归并
  */

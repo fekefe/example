@@ -14,26 +14,49 @@ import com.util.MakeNum;
 public class ArraySel {
 
 
-    public static void main(String[] args) {
-        MakeNum mn = new MakeNum(100);
-        mn.display(mn.theArray);
-        ArraySel.selectionSort(mn.theArray);
-        mn.display(mn.theArray);
-    }
+	public static void main(String[] args) {
+		MakeNum mn = new MakeNum(10);
+		mn.display(mn.theArray);
+		ArraySel.selectionSort2(mn.theArray);
+		mn.display(mn.theArray);
+	}
 
-    public static void selectionSort(long[] a) {
-        int out, in, min;
-        int nElems = a.length;
-        for (out = 0; out < nElems - 1; out++) {
-            min = out;
-            for (in = out + 1; in < nElems; in++) {
-                if (a[in] < a[min]) {
-                    min = in;
-                }
-            }
-            if (out != min) {
-                ArrayUtils.swap(a, out, min);
-            }
-        }
-    }
+	/**
+	 * 选择排序
+	 * 优化版
+	 *
+	 * @param a
+	 */
+	public static void selectionSort(long[] a) {
+		int min;
+		int nElems = a.length;
+		for (int i = 0; i < nElems - 1; i++) {
+			min = i;
+			for (int j = i + 1; j < nElems; j++) {
+				if (a[j] < a[min]) {
+					min = j;
+				}
+			}
+			if (i != min) {
+				ArrayUtils.swap(a, i, min);
+			}
+		}
+	}
+
+	/**
+	 * 选择排序
+	 * 原始版
+	 *
+	 * @param a
+	 */
+	public static void selectionSort2(long[] a) {
+		int nElems = a.length;
+		for (int i = 0; i < nElems - 1; i++) {
+			for (int j = i + 1; j < nElems; j++) {
+				if (a[i] > a[j]) {
+					ArrayUtils.swap(a, i, j);
+				}
+			}
+		}
+	}
 }

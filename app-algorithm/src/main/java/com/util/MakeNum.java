@@ -48,8 +48,15 @@ public class MakeNum {
 	 *
 	 * @param t the t
 	 */
+	public static void display1(long[] t) {
+		for (int j = 0; j < t.length; j++) {
+			System.out.print(t[j] + " ");
+		}
+		System.out.println();
+	}
+
 	public void display(long[] t) {
-		for (int j = 0; j < nElems; j++) {
+		for (int j = 0; j < t.length; j++) {
 			System.out.print(t[j] + " ");
 		}
 		System.out.println();

@@ -2,7 +2,7 @@
  * 1
  * Created by gaoquan on 2017/3/24.
  */
-package com.thread.concurrent.ThreadPoolExecutor;
+package com.concurrent.ThreadPoolExecutor;
 
 /*
 这篇文章结合Doug Lea大神在JDK1.5提供的JCU包，分别从线程池大小参数的设置、工作线程的创建、空闲线程的回收、阻塞队列的使用、任务拒绝策略、线程池Hook等方面来了解线程池的使用，其中涉及到一些细节包括不同参数、不同队列、不同拒绝策略的选择、产生的影响和行为、为更好的使用线程池奠定知识基础，其中值得注意的部分我用粗体标识。

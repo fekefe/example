@@ -1,4 +1,4 @@
-package com.notify;
+package com.thread.notify;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

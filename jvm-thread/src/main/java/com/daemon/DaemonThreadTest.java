@@ -1,4 +1,4 @@
-package com.thread.daemon;
+package com.daemon;
 
 import java.util.concurrent.TimeUnit;
 

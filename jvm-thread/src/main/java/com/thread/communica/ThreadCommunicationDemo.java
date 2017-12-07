@@ -1,33 +1,37 @@
 package com.thread.communica;
 
+import com.DemoUtil;
 import org.junit.Test;
 
 import java.util.Random;
 import java.util.concurrent.*;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2017/10/19
+ * 线程区间的通信
  */
-public class Demo {
+public class ThreadCommunicationDemo {
 
 
+	/**
+	 * 不控制A B线程，自由运行
+	 */
 	@Test
 	public void demo1() {
 		Thread a = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				printNumber("A");
+				DemoUtil.printNumber("A");
 			}
 		});
 		Thread b = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				printNumber("B");
+				DemoUtil.printNumber("B");
 			}
 		});
 		a.start();
 		b.start();
-		sleep(2000);
+		DemoUtil.sleep(2000);
 	}
 
 	/**
@@ -38,7 +42,7 @@ public class Demo {
 		final Thread a = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				printNumber("A");
+				DemoUtil.printNumber("A");
 			}
 		});
 		Thread b = new Thread(new Runnable() {
@@ -50,12 +54,12 @@ public class Demo {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				printNumber("B");
+				DemoUtil.printNumber("B");
 			}
 		});
 		a.start();
 		b.start();
-		sleep(2000);
+		DemoUtil.sleep(2000);
 	}
 
 	/**
@@ -74,7 +78,7 @@ public class Demo {
 			public void run() {
 				synchronized (lock) {
 					System.out.println("A 1");
-					sleep(1000);
+					DemoUtil.sleep(1000);
 					try {
 						lock.wait();
 					} catch (InterruptedException e) {
@@ -97,12 +101,15 @@ public class Demo {
 			}
 		});
 		a.start();
-		sleep(100);
+		DemoUtil.sleep(100);
 		b.start();
-		sleep(2000);
+		DemoUtil.sleep(2000);
 	}
 
 
+	/**
+	 *
+	 */
 	@Test
 	public void demo4() {
 		int worker = 3;
@@ -135,7 +142,7 @@ public class Demo {
 				}
 			}).start();
 		}
-		sleep(2000);
+		DemoUtil.sleep(2000);
 	}
 
 	/**
@@ -161,16 +168,14 @@ public class Demo {
 					System.out.println(rN + " is prepared, waiting for others");
 					try {
 						cyclicBarrier.await(); // 当前运动员准备完毕，等待别人准备好
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					} catch (BrokenBarrierException e) {
+					} catch (InterruptedException | BrokenBarrierException e) {
 						e.printStackTrace();
 					}
 					System.out.println(rN + " starts running"); // 所有运动员都准备好了，一起开始跑
 				}
 			}).start();
 		}
-		sleep(9000);
+		DemoUtil.sleep(9000);
 	}
 
 	/**
@@ -197,31 +202,11 @@ public class Demo {
 			System.out.println("Before futureTask.get()");
 			System.out.println("Result: " + futureTask.get());
 			System.out.println("After futureTask.get()");
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		} catch (ExecutionException e) {
+		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
 		}
-		sleep(2000);
+		DemoUtil.sleep(2000);
 	}
 
-	private static void printNumber(String threadName) {
-		int i = 0;
-		while (i++ < 3) {
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			System.out.println(threadName + " print: " + i);
-		}
-	}
 
-	private static void sleep(long time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
 }

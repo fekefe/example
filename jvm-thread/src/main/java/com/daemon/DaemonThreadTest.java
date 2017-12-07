@@ -11,7 +11,7 @@ public class DaemonThreadTest {
 		Thread mainThread = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				Thread childThread = new Thread(new ClildThread());
+				Thread childThread = new Thread(new ChildThread());
 
 				// 主线程中建立一个守护线程，当主线程结束时，守护线程也跟着结束。
 				// childThread.setDaemon(true);
@@ -27,7 +27,7 @@ public class DaemonThreadTest {
 	}
 }
 
-class ClildThread implements Runnable {
+class ChildThread implements Runnable {
 	@Override
 	public void run() {
 		while (true) {

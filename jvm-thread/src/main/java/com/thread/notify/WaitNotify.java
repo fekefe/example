@@ -6,23 +6,25 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Wait notify
+ * 在java中wait和sleep方法的不同
+ * 最大的不同是在等待时wait会释放锁，而sleep一直持有锁。Wait通常被用于线程间交互，sleep通常被用于暂停执行。
  */
 public class WaitNotify {
 
 	private static boolean flag = true;
-    private static final Object lock = new Object();
+	private static final Object lock = new Object();
 
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     * @throws Exception the exception
-     */
-    public static void main(String[] args) throws Exception {
-//		for (int i = 0; i < 5; i++) {
-//			Thread waitThread = new Thread(new Wait(), "WaitThread" + i);
-//			waitThread.start();
-//		}
+	/**
+	 * The entry point of application.
+	 *
+	 * @param args the input arguments
+	 * @throws Exception the exception
+	 */
+	public static void main(String[] args) throws Exception {
+		//		for (int i = 0; i < 5; i++) {
+		//			Thread waitThread = new Thread(new Wait(), "WaitThread" + i);
+		//			waitThread.start();
+		//		}
 		Thread waitThread = new Thread(new Wait(), "WaitThread");
 		waitThread.start();
 		TimeUnit.SECONDS.sleep(1);
@@ -31,7 +33,7 @@ public class WaitNotify {
 
 	}
 
-    private static class Wait implements Runnable {
+	private static class Wait implements Runnable {
 		@Override
 		public void run() {
 			synchronized (lock) {
@@ -40,7 +42,7 @@ public class WaitNotify {
 						System.out.println(Thread.currentThread() + " flag true " + new SimpleDateFormat("HH:mm:ss").format(new Date()));
 						lock.wait();
 					} catch (InterruptedException e) {
-                        break;
+						break;
 					}
 				}
 				System.out.println(Thread.currentThread() + " flag false " + new SimpleDateFormat("HH:mm:ss").format(new Date()));
@@ -48,7 +50,7 @@ public class WaitNotify {
 		}
 	}
 
-    private static class Notify implements Runnable {
+	private static class Notify implements Runnable {
 		@Override
 		public void run() {
 			synchronized (lock) {

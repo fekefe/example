@@ -1,6 +1,4 @@
 /**
- * 通信
- *
- * @author gaoquan on 2017/10/19
+ * 线程间通信
  */
 package com.thread.communica;

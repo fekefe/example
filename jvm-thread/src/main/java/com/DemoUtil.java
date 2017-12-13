@@ -8,11 +8,7 @@ public class DemoUtil {
 	public static void printNumber(String threadName) {
 		int i = 0;
 		while (i++ < 3) {
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+			sleep(100);
 			System.out.println(threadName + " print: " + i);
 		}
 	}

@@ -111,7 +111,7 @@ public class ThreadCommunicationDemo {
 	 *
 	 */
 	@Test
-	public void demo4() {
+	public void demo4CountDownLatch() {
 		int worker = 3;
 		final CountDownLatch countDownLatch = new CountDownLatch(worker);
 		new Thread(new Runnable() {
@@ -149,7 +149,7 @@ public class ThreadCommunicationDemo {
 	 * 三个运动员各自准备，等到三个人都准备好后，再一起跑
 	 */
 	@Test
-	public void demo5() {
+	public void demo5CyclicBarrier() {
 		int runner = 3;
 		final CyclicBarrier cyclicBarrier = new CyclicBarrier(runner);
 		final Random random = new Random();

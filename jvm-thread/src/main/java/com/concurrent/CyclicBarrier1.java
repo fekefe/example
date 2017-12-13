@@ -2,11 +2,7 @@ package com.concurrent;
 
 
 import java.util.Set;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * 假设现在需要计算3个学生的平均成绩,
@@ -14,6 +10,8 @@ import java.util.concurrent.Executors;
  * 步骤是:先计算出每个学生的平均成绩
  * 再根据每个学生的平均成绩来计算所有有同学的平均成绩
  * 使用CyclicBarrier
+ * <p>
+ * {@link com.thread.communica.ThreadCommunicationDemo}
  *
  * @author gaoquan on 2017/9/25
  */

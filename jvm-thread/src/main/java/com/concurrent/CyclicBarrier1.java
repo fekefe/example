@@ -13,7 +13,7 @@ import java.util.concurrent.*;
  * <p>
  * {@link com.thread.communica.ThreadCommunicationDemo}
  *
- * @author gaoquan on 2017/9/25
+ * @author on 2017/9/25
  */
 public class CyclicBarrier1 implements Runnable {
 

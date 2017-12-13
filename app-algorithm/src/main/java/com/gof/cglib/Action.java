@@ -10,7 +10,8 @@ public class Action {
 		System.out.println("增加图书的普通方法...");
 	}
 
-	public void delBook() {
+	public String delBook() {
 		System.out.println("删除图书的普通方法...");
+		return "del";
 	}
 }

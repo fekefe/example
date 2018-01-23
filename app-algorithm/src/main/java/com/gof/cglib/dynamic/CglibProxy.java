@@ -38,6 +38,4 @@ public class CglibProxy implements MethodInterceptor {
 		System.out.println(" after " + System.currentTimeMillis());
 		return result;
 	}
-
-
 }

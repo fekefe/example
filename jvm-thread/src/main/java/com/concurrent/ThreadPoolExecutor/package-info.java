@@ -31,13 +31,10 @@ ExecutorService基于池化的线程来执行用户提交的任务，通常可�
 ThreadPoolExecutor会根据corePoolSize和maximumPoolSize来动态调整线程池的大小:poolSize。
 
 当任务通过executor提交给线程池的时候，我们需要知道下面几个点：
-
 如果这个时候当前池子中的工作线程数小于corePoolSize，则新创建一个新的工作线程来执行这个任务，不管工作线程集合中有没有线程是处于空闲状态。
-
 如果池子中有比corePoolSize大的但是比maximumPoolSize小的工作线程，任务会首先被尝试着放入队列，这里有两种情况需要单独说一下：
 
 a. 如果任务被成功的放入队列，则看看是否需要开启新的线程来执行任务，只有当当前工作线程数为0的时候才会创建新的线程，因为之前的线程有可能因为都处于空闲状态或因为工作结束而被移除。
-
 b. 如果放入队列失败，则才会去创建新的工作线程。
 
 如果corePoolSize和maximumPoolSize相同，则线程池的大小是固定的。

@@ -14,9 +14,14 @@ public class Class16 {
 		LinkNode node2 = new LinkNode(2);
 		LinkNode node3 = new LinkNode(3);
 		LinkNode node4 = new LinkNode(4);
+		LinkNode node5 = new LinkNode(5);
+		LinkNode node6 = new LinkNode(6);
 		node1.next = node2;
 		node2.next = node3;
 		node3.next = node4;
+		node4.next = null;
+		node5.next = node6;
+		node6.next = null;
 		
 		print(node1);
 		print(reverseA(node1));
@@ -28,9 +33,14 @@ public class Class16 {
 		LinkNode node2 = new LinkNode(2);
 		LinkNode node3 = new LinkNode(3);
 		LinkNode node4 = new LinkNode(4);
+		LinkNode node5 = new LinkNode(5);
+		LinkNode node6 = new LinkNode(6);
 		node1.next = node2;
 		node2.next = node3;
 		node3.next = node4;
+		node4.next = null;
+		node5.next = node6;
+		node6.next = null;
 		
 		print(node1);
 		print(reverseB(node1));

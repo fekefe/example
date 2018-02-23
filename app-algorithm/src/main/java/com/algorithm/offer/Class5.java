@@ -27,19 +27,20 @@ public class Class5 {
 		node2.next = node3;
 		node3.next = node4;
 		
-		
+		print(node1);
 		// test1(node1);
 		// test2(node1);
-		// print(test3(node1));
-		print(test4(node1));
+		print(test4a(node1));
+		// print(test4b(node1));
 		
 	}
 	
 	private static void print(LinkNode node) {
 		while (node != null) {
-			System.out.println(node.val);
+			System.out.print(node.val + " ");
 			node = node.next;
 		}
+		System.out.println();
 	}
 	
 	/**
@@ -75,11 +76,11 @@ public class Class5 {
 	 * 递归翻转链表
 	 * 解决方案四：前三种解决方案本身属于在打印链表的时候不修改链表本身结构，在允许修改链表结构的情况下可以把链表中的节点指针反转过来，改变链表方向，然后重新遍历打印改变方向后的链表。
 	 */
-	private static LinkNode test3(LinkNode node) {
+	private static LinkNode test4a(LinkNode node) {
 		if (node == null || node.next == null) {
 			return node;
 		}
-		LinkNode nodeHead = test3(node.next);
+		LinkNode nodeHead = test4a(node.next);
 		node.next.next = node;
 		node.next = null;
 		return nodeHead;
@@ -92,11 +93,11 @@ public class Class5 {
 	 * null < A   B > C
 	 * null < A < B   C
 	 */
-	private static LinkNode test4(LinkNode node) {
-		LinkNode newNode = null;
+	private static LinkNode test4b(LinkNode node) {
 		if (node == null || node.next == null) {
 			return node;
 		}
+		LinkNode newNode = null;
 		while (node != null) {
 			LinkNode tempNode = node.next;
 			node.next = newNode;

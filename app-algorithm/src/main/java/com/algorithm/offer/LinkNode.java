@@ -14,4 +14,9 @@ public class LinkNode {
 	public LinkNode(int val) {
 		this.val = val;
 	}
+	
+	public LinkNode(int data, LinkNode next) {
+		this.val = data;
+		this.next = next;
+	}
 }

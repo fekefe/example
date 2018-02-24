@@ -27,7 +27,7 @@
  * <p>
  * -{@link com.algorithm.offer.Class21} 包含min函数的栈
  * -{@link com.algorithm.offer.Class22} 栈的压入、弹出序列
- * -{@link com.algorithm.offer.Class23} 从上到下打印二叉树（树的层序遍历）
+ * {@link com.algorithm.offer.Class23} 从上到下打印二叉树（树的层序遍历）
  * -{@link com.algorithm.offer.Class24} 二叉搜索树的后序遍历序列
  * -{@link com.algorithm.offer.Class25} 二叉树中和为某一值的路径
  * -{@link com.algorithm.offer.Class26} 复杂链表的复制

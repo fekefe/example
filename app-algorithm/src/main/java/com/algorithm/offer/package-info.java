@@ -44,7 +44,8 @@
  * -{@link com.algorithm.offer.Class27} 二叉搜索树与双向链表
  * -{@link com.algorithm.offer.Class28} 字符串的排列
  * <p>
- * {@link com.algorithm.offer.Class48}
+ * {@link com.algorithm.offer.Class47} 不用加减乘除做加法
+ * {@link com.algorithm.offer.Class48} 不能被继承的类
  */
 package com.algorithm.offer;
 

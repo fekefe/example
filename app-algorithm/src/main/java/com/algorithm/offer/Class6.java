@@ -21,7 +21,7 @@ import org.junit.Test;
  */
 public class Class6 {
 	
-	BinaryTreeNode treeFromBuild(int[] in, int[] pe, int peNum, int length) {
+	public static BinaryTreeNode treeFromBuild(int[] in, int[] pe, int peNum, int length) {
 		
 		if (length < 1 || peNum > in.length) {
 			return null;
@@ -35,11 +35,11 @@ public class Class6 {
 			}
 		}
 		// left
-		node.left = this.treeFromBuild(in, pe, peNum + 1, i);
+		node.left = treeFromBuild(in, pe, peNum + 1, i);
 		// right
 		int i1 = peNum + i + 1;
 		int i2 = 8 - (i + 1);
-		node.right = this.treeFromBuild(in, pe, i1, i2);
+		node.right = treeFromBuild(in, pe, i1, i2);
 		return node;
 	}
 	
@@ -49,7 +49,7 @@ public class Class6 {
 		int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
 		int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
 		
-		BinaryTreeNode node = this.treeFromBuild(in, pre, 0, 8);
+		BinaryTreeNode node = treeFromBuild(in, pre, 0, 8);
 		printTree(node);
 	}
 	

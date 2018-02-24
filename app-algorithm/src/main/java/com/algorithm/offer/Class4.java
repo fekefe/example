@@ -10,9 +10,9 @@ import org.junit.Test;
  */
 public class Class4 {
 	
-	// static String str = "We Are Happy     1     sds sdsds sdsds sdsds sdsd sdsds sdsdsd sdsd sdsds sd sd sdsdsd sdsd sds sdsds sdsd ssdsd s s s s s s s s   sss     ";
+	static String str = "We Are Happy     `     ``` ``` ``` `` ``` ````` ````` ``` ``` ``` ``` ```` `` `` `` ``` ``` ` ` ` ` ` ` ` `   ```     ";
 	// static String str = "We Are Happy";
-	static String str = "";
+	// static String str = "";
 	
 	@BeforeClass
 	public static void BeforeClass() {
@@ -40,28 +40,26 @@ public class Class4 {
 	
 	private String replace1(char[] words) {
 		int spaceCount = 0;
-		int oldCount = words.length;
-		for (int i = 0; i < oldCount; i++) {
+		int oldLength = words.length;
+		for (int i = 0; i < oldLength; i++) {
 			if (words[i] == ' ') {
 				spaceCount++;
 			}
 		}
-		int newCount = oldCount + spaceCount * 2;
+		int newLength = oldLength + spaceCount * 2;
 		
-		char[] newWords = new char[newCount];
+		char[] newWords = new char[newLength];
 		
-		int newLength = newCount - 1;
-		int i = oldCount - 1;
+		int indexOfNew = newLength - 1;
+		int i = oldLength - 1;
 		while (i >= 0) {
 			char word = words[i];
 			if (word == ' ') {
-				newWords[newLength] = '0';
-				newWords[newLength - 1] = '2';
-				newWords[newLength - 2] = '%';
-				newLength = newLength - 3;
+				newWords[indexOfNew--] = '0';
+				newWords[indexOfNew--] = '2';
+				newWords[indexOfNew--] = '%';
 			} else {
-				newWords[newLength] = word;
-				newLength--;
+				newWords[indexOfNew--] = word;
 			}
 			i--;
 			

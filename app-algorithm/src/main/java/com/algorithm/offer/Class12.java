@@ -10,25 +10,6 @@ import org.junit.Test;
 public class Class12 {
 	
 	@Test
-	public void test1() {
-		print1(2);
-	}
-	
-	public void print1(int n) {
-		int max = 1;
-		for (int i = 1; i <= n; i++) {
-			max = max * 10;
-		}
-		System.out.println(max);
-		for (int i = 1; i < max; ) {
-			System.out.println(i);
-			System.out.println(i + 1);
-			System.out.println(i + 2);
-			i = i + 3;
-		}
-	}
-	
-	@Test
 	public void test2() {
 		print2(2);
 	}
@@ -83,5 +64,29 @@ public class Class12 {
 			}
 		}
 		System.out.println();
+	}
+	
+	
+	@Test
+	public void test1() {
+		print1(2);
+	}
+	
+	/**
+	 * 错误的
+	 */
+	public void print1(int n) {
+		int max = 1;
+		int i = 0;
+		while (i++ < n) {
+			max = max * 10;
+		}
+		System.out.println(max);
+		for (i = 1; i < max; ) {
+			System.out.println(i);
+			System.out.println(i + 1);
+			System.out.println(i + 2);
+			i = i + 3;
+		}
 	}
 }

@@ -17,7 +17,7 @@
  * <p>
  * 代码规范性
  * <b>{@link com.algorithm.offer.Class11} 数值的整数次方
- * -{@link com.algorithm.offer.Class12} 打印1到最大的n位数
+ * <b>{@link com.algorithm.offer.Class12} 打印1到最大的n位数
  * -{@link com.algorithm.offer.Class12a} 大数的加法、减法、乘法问题的实现
  * {@link com.algorithm.offer.Class13} O(1)时间内删除链表节点
  * {@link com.algorithm.offer.Class14} 调整数组顺序使奇数位于偶数之前

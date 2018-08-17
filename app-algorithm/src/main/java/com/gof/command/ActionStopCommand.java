@@ -1,4 +1,4 @@
-package com.gof.command.other;
+package com.gof.command;
 
 /**
  * 具体命令角色，动作3

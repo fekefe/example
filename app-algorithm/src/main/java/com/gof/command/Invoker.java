@@ -1,4 +1,4 @@
-package com.gof.command.other;
+package com.gof.command;
 
 /**
  * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/8/16

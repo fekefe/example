@@ -1,4 +1,4 @@
-package com.gof.command.other;
+package com.gof.command;
 
 /**
  * 接收者角色

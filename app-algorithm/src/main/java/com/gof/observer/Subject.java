@@ -7,6 +7,7 @@ import java.util.List;
  * @author gaoquan on 2018/2/11
  */
 public class Subject {
+	
 	private List<Observer> observers = new ArrayList<Observer>();
 	private int state;
 	
@@ -28,4 +29,5 @@ public class Subject {
 			observer.update();
 		}
 	}
+	
 }

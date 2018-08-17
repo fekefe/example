@@ -3,9 +3,9 @@ package com.gof.strategy;
 /**
  * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/11
  */
-public class OperationAdd implements Strategy {
+public class OperationSubtractImpl implements IStrategy {
 	@Override
 	public int doOperation(int num1, int num2) {
-		return num1 + num2;
+		return num1 - num2;
 	}
 }

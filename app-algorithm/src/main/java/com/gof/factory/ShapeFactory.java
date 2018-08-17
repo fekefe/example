@@ -4,6 +4,7 @@ package com.gof.factory;
  * @author gaoquan on 2018/2/11
  */
 public class ShapeFactory {
+	
 	public static IShape getClass(Class<? extends IShape> clazz) {
 		IShape obj = null;
 		
@@ -20,7 +21,6 @@ public class ShapeFactory {
 		return obj;
 	}
 	
-	
 	// public static <T> T getClass(Class<? extends IShape> clazz) {
 	// 	T obj = null;
 	//
@@ -36,4 +36,5 @@ public class ShapeFactory {
 	//
 	// 	return obj;
 	// }
+	
 }

@@ -1,10 +1,14 @@
 package com.gof.factory;
 
+import com.gof.factory.impl.RectangleImpl;
+import com.gof.factory.impl.SquareImpl;
+
 /**
  * 工厂
  * @author gaoquan on 2018/2/11
  */
 public class FactoryPatternDemo {
+	
 	public static void main(String[] args) {
 		// ShapeFactory shapeFactory = new ShapeFactory();
 		
@@ -20,4 +24,5 @@ public class FactoryPatternDemo {
 		//调用 Square 的 draw 方法
 		shape3.draw();
 	}
+	
 }

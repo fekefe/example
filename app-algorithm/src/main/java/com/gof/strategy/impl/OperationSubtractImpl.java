@@ -1,4 +1,6 @@
-package com.gof.strategy;
+package com.gof.strategy.impl;
+
+import com.gof.strategy.IStrategy;
 
 /**
  * @author gaoquan on 2018/2/11

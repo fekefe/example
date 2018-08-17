@@ -1,5 +1,9 @@
 package com.gof.strategy;
 
+import com.gof.strategy.impl.OperationAddImpl;
+import com.gof.strategy.impl.OperationMultiplyImpl;
+import com.gof.strategy.impl.OperationSubtractImpl;
+
 /**
  * 策略模式
  * 定义一系列的算法，把它们一个个封装起来, 并且使它们可相互替换。

@@ -8,6 +8,7 @@ import com.gof.command.Receiver;
  * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/8/16
  */
 public class ActionRewindCommandImpl extends Command {
+	
 	public ActionRewindCommandImpl(Receiver receiver) {
 		super(receiver);
 	}
@@ -16,4 +17,5 @@ public class ActionRewindCommandImpl extends Command {
 	public void Execute() {
 		receiver.rewind();
 	}
+	
 }

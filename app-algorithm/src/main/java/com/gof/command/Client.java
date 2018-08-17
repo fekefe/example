@@ -27,8 +27,6 @@ public class Client {
 		
 		invoker.setCommand(actionStopCommand);
 		invoker.ExecuteCommand();
-		
-		
 	}
 	
 }

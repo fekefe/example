@@ -5,6 +5,7 @@ package com.gof.command;
  * @author gaoquan on 2018/8/16
  */
 public class Receiver {
+	
 	public void play() {
 		System.out.println("Play");
 	}
@@ -16,4 +17,5 @@ public class Receiver {
 	public void stop() {
 		System.out.println("Stop");
 	}
+	
 }

@@ -5,6 +5,7 @@ package com.gof.command;
  * @author gaoquan on 2018/8/16
  */
 public abstract class Command {
+	
 	protected Receiver receiver;
 	
 	public Command(Receiver receiver) {

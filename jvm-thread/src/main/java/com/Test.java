@@ -1,7 +1,7 @@
 package com;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2017/12/17
+ * @author gaoquan on 2017/12/17
  */
 public class Test {
 

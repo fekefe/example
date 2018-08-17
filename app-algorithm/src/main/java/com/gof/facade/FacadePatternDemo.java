@@ -15,7 +15,7 @@ package com.gof.facade;
  * 1）对客户屏蔽子系统组件，因而减少了客户处理对象的数目并使得子系统使用起来更加方便。
  * 2）实现了子系统与客户之间的松耦合关系，而子系统内部的功能组件万网时紧耦合的。
  * 3）如果应用需要，外观模式并不限制他们使用子系统类。
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/8/17
+ * @author gaoquan on 2018/8/17
  */
 public class FacadePatternDemo {
 	

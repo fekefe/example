@@ -3,7 +3,7 @@ package com.algorithm.leetcode;
 import org.junit.Test;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/13
+ * @author gaoquan on 2018/2/13
  */
 public class Test8 {
 	public int myAtoi(String str) {

@@ -1,7 +1,7 @@
 package com.ggh.numtest;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/6/20
+ * @author gaoquan on 2018/6/20
  */
 public class TriangleArray {
 	

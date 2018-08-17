@@ -1,7 +1,7 @@
 package com.ggh.numtest;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/4/13
+ * @author gaoquan on 2018/4/13
  */
 public class fuhao {
 	

@@ -1,7 +1,7 @@
 package com.gof.decorator;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/11
+ * @author gaoquan on 2018/2/11
  */
 public class RedShapeDecorator extends ShapeDecorator {
 	

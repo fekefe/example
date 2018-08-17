@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /**
  * 两个队列实现一个栈
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/1/25
+ * @author gaoquan on 2018/1/25
  */
 public class Class7a {
 	/*

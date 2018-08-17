@@ -11,7 +11,7 @@ import java.util.List;
  * 3[a] 输出aaa
  * 	3[ab]2[c] 输出abababcc
  * 	3[2[ab]2[c]] 输出ababccababccababcc
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/7
+ * @author gaoquan on 2018/2/7
  */
 public class Test1 {
 	

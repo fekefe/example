@@ -6,7 +6,7 @@ import org.junit.Test;
  * 旋转数组的给定一个指定的数字n，让我们从数组中找出它的位置
  * 题目：把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。给定一个指定的数字n，让我们从数组中找出它的位置。
  * 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，输入1，返回位置3
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/1/25
+ * @author gaoquan on 2018/1/25
  */
 public class Class8a {
 	/*

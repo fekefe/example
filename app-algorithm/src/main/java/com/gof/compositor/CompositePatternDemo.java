@@ -1,7 +1,12 @@
 package com.gof.compositor;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/8/17
+ * 组合模式
+ * <br>
+ * 适用性
+ * 1. 想表示对象的部分－整体层次结构。
+ * 2. 希望用户忽略组合对象与单个对象的不同。用户将统一地使用组合结构中的所有对象。
+ * @author gaoquan on 2018/8/17
  */
 public class CompositePatternDemo {
 	

@@ -3,7 +3,7 @@ package com.algorithm.leetcode;
 import org.junit.Test;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/14
+ * @author gaoquan on 2018/2/14
  */
 public class Test9 {
 	public boolean isPalindrome(int x) {

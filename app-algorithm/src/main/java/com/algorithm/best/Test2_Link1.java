@@ -7,7 +7,7 @@ import com.algorithm.best.base.Link;
  * -------------
  * 给定两个有序链表的头指针head1和head2，
  * 打印两个链表的公共部分
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/1/24
+ * @author gaoquan on 2018/1/24
  */
 public class Test2_Link1 {
 	

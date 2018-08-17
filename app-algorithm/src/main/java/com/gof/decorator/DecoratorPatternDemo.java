@@ -6,7 +6,7 @@ import com.gof.decorator.impl.RectangleImpl;
 /**
  * 装饰器模式
  * 接口-》抽象-》实现
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/11
+ * @author gaoquan on 2018/2/11
  */
 public class DecoratorPatternDemo {
 	public static void main(String[] args) {

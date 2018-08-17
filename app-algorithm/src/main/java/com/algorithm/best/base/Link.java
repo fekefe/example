@@ -1,7 +1,7 @@
 package com.algorithm.best.base;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/1/24
+ * @author gaoquan on 2018/1/24
  */
 public class Link {
 	public int val;

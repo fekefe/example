@@ -2,7 +2,7 @@ package com.gof.command;
 
 /**
  * 接收者角色
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/8/16
+ * @author gaoquan on 2018/8/16
  */
 public class Receiver {
 	public void play() {

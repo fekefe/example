@@ -1,7 +1,7 @@
 package com.gof.command;
 
 /**
- * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/8/16
+ * @author gaoquan on 2018/8/16
  */
 public class Invoker {
 	public Command command;

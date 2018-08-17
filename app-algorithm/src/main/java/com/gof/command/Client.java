@@ -1,5 +1,9 @@
 package com.gof.command;
 
+import com.gof.command.impl.ActionPlayCommand;
+import com.gof.command.impl.ActionRewindCommand;
+import com.gof.command.impl.ActionStopCommand;
+
 /**
  * 命令模式
  * 客户端

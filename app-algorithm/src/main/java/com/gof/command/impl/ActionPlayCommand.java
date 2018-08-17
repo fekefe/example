@@ -1,4 +1,7 @@
-package com.gof.command;
+package com.gof.command.impl;
+
+import com.gof.command.Command;
+import com.gof.command.Receiver;
 
 /**
  * 具体命令角色，动作1

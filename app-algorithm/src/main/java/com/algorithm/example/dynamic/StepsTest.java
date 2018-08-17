@@ -8,25 +8,31 @@ import org.junit.Test;
  */
 public class StepsTest {
 	
-	public int[] A = new int[100];
+	private int[] array = new int[100];
 	
-	public int f3(int n) {
-		if (n <= 2) {
-			A[n] = n;
+	/**
+	 * 第一个数时1，返回指定位置的数，等于前两个数的和
+	 * Calculate int.
+	 * @param num the num
+	 * @return int
+	 */
+	private int calculate(int num) {
+		if (num <= 2) {
+			array[num] = num;
 		}
-		if (A[n] > 0) {
-			return A[n];
+		if (array[num] > 0) {
+			return array[num];
 		} else {
-			A[n] = f3(n - 1) + f3(n - 2);
-			return A[n];
+			array[num] = calculate(num - 1) + calculate(num - 2);
+			return array[num];
 		}
 	}
 	
 	@Test
 	public void f3Test() {
-		int n = 10;
-		int i = f3(n);
-		System.out.println(i);
+		int num = 11;
+		int count = calculate(num);
+		System.out.println(count);
 	}
 	
 }

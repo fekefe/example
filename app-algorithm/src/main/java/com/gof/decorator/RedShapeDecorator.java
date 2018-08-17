@@ -5,7 +5,7 @@ package com.gof.decorator;
  */
 public class RedShapeDecorator extends ShapeDecorator {
 	
-	public RedShapeDecorator(Shape decoratedShape) {
+	public RedShapeDecorator(IShape decoratedShape) {
 		super(decoratedShape);
 	}
 	
@@ -15,7 +15,7 @@ public class RedShapeDecorator extends ShapeDecorator {
 		setRedBorder(decoratedShape);
 	}
 	
-	private void setRedBorder(Shape decoratedShape) {
+	private void setRedBorder(IShape decoratedShape) {
 		System.out.println("Border Color: Red");
 	}
 }

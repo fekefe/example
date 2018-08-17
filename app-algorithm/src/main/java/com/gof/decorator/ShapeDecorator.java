@@ -3,10 +3,10 @@ package com.gof.decorator;
 /**
  * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/11
  */
-public abstract class ShapeDecorator implements Shape {
-	protected Shape decoratedShape;
+public abstract class ShapeDecorator implements IShape {
+	protected IShape decoratedShape;
 	
-	public ShapeDecorator(Shape decoratedShape) {
+	public ShapeDecorator(IShape decoratedShape) {
 		this.decoratedShape = decoratedShape;
 	}
 	

@@ -1,16 +1,21 @@
 package com.gof.decorator;
 
+import com.gof.decorator.impl.CircleImpl;
+import com.gof.decorator.impl.RectangleImpl;
+
 /**
+ * 装饰器模式
+ * 接口-》抽象-》实现
  * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/2/11
  */
 public class DecoratorPatternDemo {
 	public static void main(String[] args) {
 		
-		Shape circle = new Circle();
+		IShape circle = new CircleImpl();
 		
-		Shape redCircle = new RedShapeDecorator(new Circle());
+		IShape redCircle = new RedShapeDecorator(new CircleImpl());
 		
-		Shape redRectangle = new RedShapeDecorator(new Rectangle());
+		IShape redRectangle = new RedShapeDecorator(new RectangleImpl());
 		
 		System.out.println("Circle with normal border");
 		circle.draw();

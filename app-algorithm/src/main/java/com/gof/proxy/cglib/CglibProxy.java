@@ -1,4 +1,4 @@
-package com.gof.cglib.dynamic;
+package com.gof.proxy.cglib;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -8,16 +8,15 @@ import java.lang.reflect.Method;
 
 /**
  * Cglib.
- *
  * @author gaoquan on 2017/8/9.
  */
 public class CglibProxy implements MethodInterceptor {
 	private Enhancer enhancer = new Enhancer();
-
+	
 	public CglibProxy() {
 		super();
 	}
-
+	
 	public <T> T bind(Class<T> clazz) {
 		// 设置代理目标，被代理的类的Class对象
 		enhancer.setSuperclass(clazz);
@@ -27,7 +26,7 @@ public class CglibProxy implements MethodInterceptor {
 		enhancer.setClassLoader(clazz.getClassLoader());
 		return (T) enhancer.create();
 	}
-
+	
 	/**
 	 * 拦截操作
 	 */

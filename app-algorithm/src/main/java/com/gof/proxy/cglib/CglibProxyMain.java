@@ -1,6 +1,6 @@
-package com.gof.cglib.dynamic;
+package com.gof.proxy.cglib;
 
-import com.gof.cglib.Action;
+import com.gof.proxy.ActionImpl;
 import org.junit.Test;
 
 /**
@@ -9,27 +9,25 @@ import org.junit.Test;
  */
 public class CglibProxyMain {
 	
-	
 	/**
 	 * 常规生成
 	 */
 	@Test
 	public void test1() {
 		CglibProxy bossProxy = new CglibProxy();
-		Action bossAction = bossProxy.bind(Action.class);
+		ActionImpl bossAction = bossProxy.bind(ActionImpl.class);
 		bossAction.addBook();
-		String s = bossAction.delBook();
-		System.out.println(s);
+		String message = bossAction.delBook();
+		System.out.println(message);
 		
-		s = "";
-		System.out.println(s);
+		message = "";
+		System.out.println(message);
 		
 		CglibProxy proxy = new CglibProxy();
-		Action action1 = proxy.bind(Action.class);
+		ActionImpl action1 = proxy.bind(ActionImpl.class);
 		action1.addBook();
-		s = action1.delBook();
-		System.out.println(s);
-		
+		message = action1.delBook();
+		System.out.println(message);
 	}
 	
 	/**
@@ -38,12 +36,12 @@ public class CglibProxyMain {
 	@Test
 	public void test2() {
 		CglibProxy cglibProxy = new CglibProxy();
-		Action bossAction = cglibProxy.bind(Action.class);
+		ActionImpl bossAction = cglibProxy.bind(ActionImpl.class);
 		bossAction.addBook();
 		bossAction.set("1111");
 		System.out.println(" bossAction.get1():" + bossAction.get1());
 		
-		Action action1 = cglibProxy.bind(Action.class);
+		ActionImpl action1 = cglibProxy.bind(ActionImpl.class);
 		action1.addBook();
 		System.out.println("action1.get1():" + action1.get1());
 	}

@@ -1,12 +1,12 @@
-package com.gof.cglib;
+package com.gof.proxy;
 
 /**
  * 这个是没有实现接口的实现类
  * @author student
  */
-public class Action {
+public class ActionImpl {
 	
-	private String s;
+	private String msg;
 	
 	public void addBook() {
 		System.out.println("增加图书的普通方法...");
@@ -17,12 +17,12 @@ public class Action {
 		return "del";
 	}
 	
-	public void set(String s) {
-		this.s = s;
+	public void set(String msg) {
+		this.msg = msg;
 	}
 	
 	public String get1() {
 		System.out.println("get...");
-		return s;
+		return msg;
 	}
 }

@@ -1,8 +1,8 @@
 package com.gof.command;
 
-import com.gof.command.impl.ActionPlayCommand;
-import com.gof.command.impl.ActionRewindCommand;
-import com.gof.command.impl.ActionStopCommand;
+import com.gof.command.impl.ActionPlayCommandImpl;
+import com.gof.command.impl.ActionRewindCommandImpl;
+import com.gof.command.impl.ActionStopCommandImpl;
 
 /**
  * 命令模式
@@ -14,9 +14,9 @@ public class Client {
 	public static void main(String[] args) {
 		Receiver receiver = new Receiver();
 		Invoker invoker = new Invoker();
-		Command actionPlayCommand = new ActionPlayCommand(receiver);
-		Command actionRewindCommand = new ActionRewindCommand(receiver);
-		Command actionStopCommand = new ActionStopCommand(receiver);
+		Command actionPlayCommand = new ActionPlayCommandImpl(receiver);
+		Command actionRewindCommand = new ActionRewindCommandImpl(receiver);
+		Command actionStopCommand = new ActionStopCommandImpl(receiver);
 		
 		
 		invoker.setCommand(actionPlayCommand);

@@ -7,8 +7,8 @@ import com.gof.command.Receiver;
  * 具体命令角色，动作1
  * @author DEPT RD4 gaoquan(gaoquan@dvt.dvt.com) on 2018/8/16
  */
-public class ActionPlayCommand extends Command {
-	public ActionPlayCommand(Receiver receiver) {
+public class ActionPlayCommandImpl extends Command {
+	public ActionPlayCommandImpl(Receiver receiver) {
 		super(receiver);
 	}
 	

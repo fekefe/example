@@ -6,6 +6,7 @@ import org.junit.Test;
  * @author gaoquan on 2018/2/14
  */
 public class Test9 {
+	
 	public boolean isPalindrome(int x) {
 		int length = 0;
 		int count = 2;
@@ -44,4 +45,5 @@ public class Test9 {
 		
 		
 	}
+	
 }

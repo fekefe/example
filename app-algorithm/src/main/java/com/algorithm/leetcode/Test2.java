@@ -2,9 +2,7 @@ package com.algorithm.leetcode;
 
 /**
  * @author gaoquan on 2018/2/14
- */
-
-/**
+ *
  * Definition for singly-linked list.
  * public class ListNode {
  * int val;
@@ -21,9 +19,11 @@ package com.algorithm.leetcode;
 // Output: 7 -> 0 -> 8
 // Explanation: 342 + 465 = 807.
 public class Test2 {
+	
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		
 		
 		return null;
 	}
+	
 }

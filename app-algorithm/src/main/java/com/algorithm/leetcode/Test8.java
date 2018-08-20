@@ -6,6 +6,7 @@ import org.junit.Test;
  * @author gaoquan on 2018/2/13
  */
 public class Test8 {
+	
 	public int myAtoi(String str) {
 		if (str == null || str.length() == 0) {
 			return 0;
@@ -94,6 +95,5 @@ public class Test8 {
 		// System.out.println(Integer.parseInt("+-2"));
 		
 	}
-	
 	
 }

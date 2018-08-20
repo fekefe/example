@@ -33,4 +33,5 @@ public class Test7 {
 		// int ints = this.reverse(1534236469);
 		System.out.println(ints);
 	}
+	
 }

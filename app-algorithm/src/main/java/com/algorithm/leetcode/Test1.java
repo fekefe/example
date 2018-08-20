@@ -10,7 +10,6 @@ import java.util.Map;
  */
 public class Test1 {
 	
-	
 	public int[] twoSum(int[] nums, int target) {
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < nums.length; i++) {
@@ -31,6 +30,5 @@ public class Test1 {
 		System.out.println(ints[0]);
 		System.out.println(ints[1]);
 	}
-	
 	
 }

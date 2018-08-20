@@ -7,7 +7,7 @@
  * {@link com.algorithm.offer.Class5} 从尾到头打印链表
  * {@link com.algorithm.offer.Class6} 重建二叉树
  * {@link com.algorithm.offer.Class7} 用两个栈实现队列
- * {@link com.algorithm.offer.Class7a} 两个队列实现一个栈
+ * {@link com.algorithm.offer.Class7a} 用两个队列实现栈
  * <p>
  * 算法和数据操作
  * {@link com.algorithm.offer.Class8} 旋转数组的最小数字

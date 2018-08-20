@@ -94,15 +94,15 @@ public class Test1 {
 	
 	public JSONObject StringCreateJson() {
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("name", "王尼玛");
+		jsonObject.put("name", "大1");
 		
 		//粉丝是个数组,其实就是嵌套json
 		JSONObject jsonObject1 = new JSONObject();
-		jsonObject1.put("name", "小王");
+		jsonObject1.put("name", "小1");
 		jsonObject1.put("age", 7);
 		
 		JSONObject jsonObject2 = new JSONObject();
-		jsonObject2.put("name", "小尼玛");
+		jsonObject2.put("name", "小2");
 		jsonObject2.put("age", 10);
 		
 		//从此处可以看出其实list和json也是互相转换的

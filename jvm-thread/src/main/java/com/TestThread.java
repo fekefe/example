@@ -1,9 +1,11 @@
 package com;
 
+import org.junit.Test;
+
 /**
  * @author gaoquan on 2017/12/17
  */
-public class Test {
+public class TestThread {
 
 	class Yes1 implements Runnable {
 		@Override
@@ -13,7 +15,7 @@ public class Test {
 	}
 
 
-	@org.junit.Test
+	@Test
 	public void main() {
 		// Yes1 y = new Yes1();
 

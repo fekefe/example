@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.boot.example.dao.OssAccountProductDao">
+	<resultMap id="BaseResultMap" type="map">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="create_at" property="createAt" jdbcType="TIMESTAMP"/>
+		<result column="modify_at" property="modifyAt" jdbcType="TIMESTAMP"/>
+		<result column="discriminator" property="discriminator" jdbcType="VARCHAR"/>
+		<result column="amount" property="amount" jdbcType="BIGINT"/>
+		<result column="backup" property="backup" jdbcType="VARCHAR"/>
+		<result column="channel_id" property="channelId" jdbcType="VARCHAR"/>
+		<result column="charge_type" property="chargeType" jdbcType="BIGINT"/>
+		<result column="content_id" property="contentId" jdbcType="VARCHAR"/>
+		<result column="disable_time" property="disableTime" jdbcType="TIMESTAMP"/>
+		<result column="enable_time" property="enableTime" jdbcType="TIMESTAMP"/>
+		<result column="order_flag" property="orderFlag" jdbcType="VARCHAR"/>
+		<result column="order_status" property="orderStatus" jdbcType="BIGINT"/>
+		<result column="productprice" property="productprice" jdbcType="DOUBLE"/>
+		<result column="program_id" property="programId" jdbcType="VARCHAR"/>
+		<result column="stb_id" property="stbId" jdbcType="VARCHAR"/>
+		<result column="sub_relation_type" property="subRelationType" jdbcType="VARCHAR"/>
+		<result column="subscribe_time" property="subscribeTime" jdbcType="TIMESTAMP"/>
+		<result column="subscribeprice" property="subscribeprice" jdbcType="DOUBLE"/>
+		<result column="ttv_flg" property="ttvFlg" jdbcType="VARCHAR"/>
+		<result column="unit" property="unit" jdbcType="BIGINT"/>
+		<result column="unsubscribe_time" property="unsubscribeTime" jdbcType="TIMESTAMP"/>
+		<result column="who_order" property="whoOrder" jdbcType="VARCHAR"/>
+		<result column="account_id" property="accountId" jdbcType="BIGINT"/>
+		<result column="product_id" property="productId" jdbcType="BIGINT"/>
+		<result column="subscribe_type" property="subscribeType" jdbcType="BIGINT"/>
+		<result column="delete_state" property="deleteState" jdbcType="BIT"/>
+		<result column="user_product_id" property="userProductId" jdbcType="CHAR"/>
+		<result column="user_id" property="userId" jdbcType="CHAR"/>
+		<result column="bo_product_id" property="boProductId" jdbcType="CHAR"/>
+		<result column="subscribe_type_id" property="subscribeTypeId" jdbcType="CHAR"/>
+	</resultMap>
+
+	<sql id="Base_Column_List">
+    id, create_at, modify_at, discriminator, amount, backup, channel_id, charge_type, 
+    content_id, disable_time, enable_time, order_flag, order_status, productprice, program_id, 
+    stb_id, sub_relation_type, subscribe_time, subscribeprice, ttv_flg, unit, unsubscribe_time, 
+    who_order, account_id, product_id, subscribe_type, delete_state, user_product_id, 
+    user_id, bo_product_id, subscribe_type_id
+  	</sql>
+
+	<insert id="insertSelective" parameterType="map">
+		insert into tb_oss_account_product
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+				discriminator,
+				amount,
+				disable_time,
+				enable_time,
+				order_status,
+				stb_id,
+				subscribe_time,
+				unit,
+				who_order,
+				delete_state,
+				subscribe_type,
+				subscribe_type_id,
+			user_product_id,
+			account_id,
+				user_id,
+			product_id,
+				bo_product_id,
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+				"AccountProductRef",
+				-1,
+				"2099-01-01 23:59:59",
+				"2018-09-05 00:00:00",
+				1,
+				"",
+				"2018-09-05 08:44:45",
+				1,
+				"0",
+				"\0",
+				1,
+				"md-data_101_4e707c4d-ff1a-11e7-8504-00059a3c7a00",
+			#{record.userProductId,jdbcType=CHAR},
+			#{record.accountId,jdbcType=BIGINT},
+				#{record.userId,jdbcType=CHAR},
+			#{record.productId,jdbcType=BIGINT},
+				#{record.boProductId,jdbcType=CHAR},
+		</trim>
+	</insert>
+
+	<insert id="insertSelectiveBatch" parameterType="map">
+		insert into tb_oss_account_product
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			discriminator,
+			amount,
+			disable_time,
+			enable_time,
+			order_status,
+			stb_id,
+			subscribe_time,
+			unit,
+			who_order,
+			account_id,
+			product_id,
+			subscribe_type,
+			delete_state,
+			user_product_id,
+			user_id,
+			bo_product_id,
+			subscribe_type_id,
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			#{record.discriminator,jdbcType=VARCHAR},
+			#{record.amount,jdbcType=BIGINT},
+			#{record.disableTime,jdbcType=TIMESTAMP},
+			#{record.enableTime,jdbcType=TIMESTAMP},
+			#{record.orderStatus,jdbcType=BIGINT},
+			#{record.stbId,jdbcType=VARCHAR},
+			#{record.subscribeTime,jdbcType=TIMESTAMP},
+			#{record.unit,jdbcType=BIGINT},
+			#{record.whoOrder,jdbcType=VARCHAR},
+			#{record.accountId,jdbcType=BIGINT},
+			#{record.productId,jdbcType=BIGINT},
+			#{record.subscribeType,jdbcType=BIGINT},
+			#{record.deleteState,jdbcType=BIT},
+			#{record.userProductId,jdbcType=CHAR},
+			#{record.userId,jdbcType=CHAR},
+			#{record.boProductId,jdbcType=CHAR},
+			#{record.subscribeTypeId,jdbcType=CHAR},
+		</trim>
+	</insert>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map">
+		select
+		<include refid="Base_Column_List"/>
+		from tb_oss_account_product
+		where id = #{id,jdbcType=BIGINT}
+	</select>
+
+	<select id="selectByNewId" resultMap="BaseResultMap" parameterType="map">
+		select
+		<include refid="Base_Column_List"/>
+		from tb_oss_account_product
+		where user_product_id = #{newId,jdbcType=CHAR}
+	</select>
+
+	<select id="selectById" resultMap="BaseResultMap" parameterType="map">
+		select
+		<include refid="Base_Column_List"/>
+		from tb_oss_account_product
+		where
+		<choose>
+			<when test="id != null">
+				id = #{id,jdbcType=BIGINT}
+			</when>
+			<otherwise>
+				user_product_id = #{userProductId,jdbcType=CHAR}
+			</otherwise>
+		</choose>
+	</select>
+
+</mapper>

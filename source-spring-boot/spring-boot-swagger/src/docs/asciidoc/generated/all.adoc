@@ -1,0 +1,822 @@
+= BoContentLiveChannel
+
+
+[[_overview]]
+== 概览
+内容管理中心直播管理的关系微服务的接口
+
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : 4.1.8
+
+
+=== 联系方式
+[%hardbreaks]
+__名字__ : ZhangWeiDong(zhangweidong@sumaott.com)
+
+
+=== 许可信息
+[%hardbreaks]
+__许可证__ : 2018-1-10
+__服务条款__ : http://springfox.io
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost
+__基础路径__ : /
+
+
+=== 标签
+
+* 1.1点播相关接口 : 点播相关接口
+* 1.2测试2 : 测试2
+* 1.3测试1 : 测试1
+* 基础公共接口 : 基础公共接口
+
+
+
+
+[[_paths]]
+== 资源
+
+[[_99a7eb38c639e72a146d6f9034a5c34d]]
+=== 1.1点播相关接口
+点播相关接口
+
+
+[[_ptl_ipvp_cmn_cmn007usingpost_2]]
+==== 删除直播频道分类关系
+....
+POST /ptl_ipvp_cmn_vod001
+....
+
+
+===== 说明
+删除直播频道分类关系
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**pkv** +
+__可选__|用户ID|string
+|**Query**|**plocation** +
+__可选__|用户ID|string
+|**Query**|**pserialNumber** +
+__可选__|用户ID|string
+|**Query**|**pserverAddress** +
+__可选__|用户ID|string
+|**Query**|**ptn** +
+__可选__|用户ID|string
+|**Query**|**ptoken** +
+__可选__|用户ID|string
+|**Query**|**ptype** +
+__可选__|用户ID|string
+|**Query**|**puser** +
+__可选__|用户ID|string
+|**Query**|**pversion** +
+__可选__|用户ID|string
+|**Query**|**tenantId** +
+__可选__|用户ID|string
+|**Body**|**id** +
+__必填__|私有参数|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_responsemap,ResponseMap>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `application/json;charset=UTF-8`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/ptl_ipvp_cmn_vod001
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "pkv" : "string",
+  "plocation" : "string",
+  "pserialNumber" : "string",
+  "pserverAddress" : "string",
+  "ptn" : "string",
+  "ptoken" : "string",
+  "ptype" : "string",
+  "puser" : "string",
+  "pversion" : "string",
+  "tenantId" : "string"
+}
+----
+
+
+====== 请求 body
+[source,json]
+----
+{ }
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "data" : "object",
+  "errorMessage" : "xxxx",
+  "exception" : "xxxx",
+  "status" : "0",
+  "versionCode" : "1",
+  "versionName" : "4.1.8"
+}
+----
+
+
+[[_03630be9ac1639c6ff89efd08fb64220]]
+=== 1.2测试2
+测试2
+
+
+[[_ptl_ipvp_cmn_cmn007usingpost_1]]
+==== 删除直播频道分类关系
+....
+POST /ptl_ipvp_cmn_2
+....
+
+
+===== 说明
+删除直播频道分类关系
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**pkv** +
+__可选__|用户ID|string
+|**Query**|**plocation** +
+__可选__|用户ID|string
+|**Query**|**pserialNumber** +
+__可选__|用户ID|string
+|**Query**|**pserverAddress** +
+__可选__|用户ID|string
+|**Query**|**ptn** +
+__可选__|用户ID|string
+|**Query**|**ptoken** +
+__可选__|用户ID|string
+|**Query**|**ptype** +
+__可选__|用户ID|string
+|**Query**|**puser** +
+__可选__|用户ID|string
+|**Query**|**pversion** +
+__可选__|用户ID|string
+|**Query**|**tenantId** +
+__可选__|用户ID|string
+|**Body**|**id** +
+__可选__|私有参数|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_responsemap,ResponseMap>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `application/json;charset=UTF-8`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/ptl_ipvp_cmn_2
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "pkv" : "string",
+  "plocation" : "string",
+  "pserialNumber" : "string",
+  "pserverAddress" : "string",
+  "ptn" : "string",
+  "ptoken" : "string",
+  "ptype" : "string",
+  "puser" : "string",
+  "pversion" : "string",
+  "tenantId" : "string"
+}
+----
+
+
+====== 请求 body
+[source,json]
+----
+{ }
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "data" : "object",
+  "errorMessage" : "xxxx",
+  "exception" : "xxxx",
+  "status" : "0",
+  "versionCode" : "1",
+  "versionName" : "4.1.8"
+}
+----
+
+
+[[_3c7b60413b067930fe54429d2d15710b]]
+=== 1.3测试1
+测试1
+
+
+[[_ptl_ipvp_cmn_cmn007usingpost]]
+==== 删除直播频道分类关系
+....
+POST /ptl_ipvp_cmn_3
+....
+
+
+===== 说明
+删除直播频道分类关系
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**pkv** +
+__可选__|用户ID|string
+|**Query**|**plocation** +
+__可选__|用户ID|string
+|**Query**|**pserialNumber** +
+__可选__|用户ID|string
+|**Query**|**pserverAddress** +
+__可选__|用户ID|string
+|**Query**|**ptn** +
+__可选__|用户ID|string
+|**Query**|**ptoken** +
+__可选__|用户ID|string
+|**Query**|**ptype** +
+__可选__|用户ID|string
+|**Query**|**puser** +
+__可选__|用户ID|string
+|**Query**|**pversion** +
+__可选__|用户ID|string
+|**Query**|**tenantId** +
+__可选__|用户ID|string
+|**Body**|**id** +
+__可选__|私有参数|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_responsemap,ResponseMap>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `application/json;charset=UTF-8`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/ptl_ipvp_cmn_3
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "pkv" : "string",
+  "plocation" : "string",
+  "pserialNumber" : "string",
+  "pserverAddress" : "string",
+  "ptn" : "string",
+  "ptoken" : "string",
+  "ptype" : "string",
+  "puser" : "string",
+  "pversion" : "string",
+  "tenantId" : "string"
+}
+----
+
+
+====== 请求 body
+[source,json]
+----
+{ }
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "data" : "object",
+  "errorMessage" : "xxxx",
+  "exception" : "xxxx",
+  "status" : "0",
+  "versionCode" : "1",
+  "versionName" : "4.1.8"
+}
+----
+
+
+[[_dbeaed9f2e2a29b42c6cbbaca7d2221b]]
+=== 基础公共接口
+基础公共接口
+
+
+[[_ptl_ipvp_cmn_cmn001usingpost]]
+==== 删除直播频道分类关系
+....
+POST /ptl_ipvp_cmn_cmn001
+....
+
+
+===== 说明
+删除直播频道分类关系
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**pkv** +
+__可选__|用户ID|string
+|**Query**|**plocation** +
+__可选__|用户ID|string
+|**Query**|**pserialNumber** +
+__可选__|用户ID|string
+|**Query**|**pserverAddress** +
+__可选__|用户ID|string
+|**Query**|**ptn** +
+__可选__|用户ID|string
+|**Query**|**ptoken** +
+__可选__|用户ID|string
+|**Query**|**ptype** +
+__可选__|用户ID|string
+|**Query**|**puser** +
+__可选__|用户ID|string
+|**Query**|**pversion** +
+__可选__|用户ID|string
+|**Query**|**tenantId** +
+__可选__|用户ID|string
+|**Body**|**id** +
+__可选__|私有参数|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_responsemap,ResponseMap>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `application/json;charset=UTF-8`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/ptl_ipvp_cmn_cmn001
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "pkv" : "string",
+  "plocation" : "string",
+  "pserialNumber" : "string",
+  "pserverAddress" : "string",
+  "ptn" : "string",
+  "ptoken" : "string",
+  "ptype" : "string",
+  "puser" : "string",
+  "pversion" : "string",
+  "tenantId" : "string"
+}
+----
+
+
+====== 请求 body
+[source,json]
+----
+{ }
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "data" : "object",
+  "errorMessage" : "xxxx",
+  "exception" : "xxxx",
+  "status" : "0",
+  "versionCode" : "1",
+  "versionName" : "4.1.8"
+}
+----
+
+
+[[_ptl_ipvp_cmn_cmn005usingpost]]
+==== 获取地区信息接口
+....
+POST /ptl_ipvp_cmn_cmn005
+....
+
+
+===== 说明
+获取地区信息，可以获得OMC支持的所有地区列表，也可通过GPS定位，传入要查询的对应城市或县、区的名称，返回对应在OMC系统中的locationID。
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**pkv** +
+__可选__|用户ID|string
+|**Query**|**plocation** +
+__可选__|用户ID|string
+|**Query**|**pserialNumber** +
+__可选__|用户ID|string
+|**Query**|**pserverAddress** +
+__可选__|用户ID|string
+|**Query**|**ptn** +
+__可选__|用户ID|string
+|**Query**|**ptoken** +
+__可选__|用户ID|string
+|**Query**|**ptype** +
+__可选__|用户ID|string
+|**Query**|**puser** +
+__可选__|用户ID|string
+|**Query**|**pversion** +
+__可选__|用户ID|string
+|**Query**|**tenantId** +
+__可选__|用户ID|string
+|**Body**|**id** +
+__可选__|私有参数|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_responsemap,ResponseMap>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `application/json;charset=UTF-8`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/ptl_ipvp_cmn_cmn005
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "pkv" : "string",
+  "plocation" : "string",
+  "pserialNumber" : "string",
+  "pserverAddress" : "string",
+  "ptn" : "string",
+  "ptoken" : "string",
+  "ptype" : "string",
+  "puser" : "string",
+  "pversion" : "string",
+  "tenantId" : "string"
+}
+----
+
+
+====== 请求 body
+[source,json]
+----
+{ }
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "data" : "object",
+  "errorMessage" : "xxxx",
+  "exception" : "xxxx",
+  "status" : "0",
+  "versionCode" : "1",
+  "versionName" : "4.1.8"
+}
+----
+
+
+[[_ptl_ipvp_cmn_cmn006usingpost]]
+==== 获取地区信息接口
+....
+POST /ptl_ipvp_cmn_cmn006
+....
+
+
+===== 说明
+获取地区信息，可以获得OMC支持的所有地区列表，也可通过GPS定位，传入要查询的对应城市或县、区的名称，返回对应在OMC系统中的locationID。
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Query**|**pkv** +
+__可选__|用户ID|string
+|**Query**|**plocation** +
+__可选__|用户ID|string
+|**Query**|**pserialNumber** +
+__可选__|用户ID|string
+|**Query**|**pserverAddress** +
+__可选__|用户ID|string
+|**Query**|**ptn** +
+__可选__|用户ID|string
+|**Query**|**ptoken** +
+__可选__|用户ID|string
+|**Query**|**ptype** +
+__可选__|用户ID|string
+|**Query**|**puser** +
+__可选__|用户ID|string
+|**Query**|**pversion** +
+__可选__|用户ID|string
+|**Query**|**tenantId** +
+__可选__|用户ID|string
+|**Body**|**id** +
+__可选__|私有参数|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_responsemap,ResponseMap>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `application/json;charset=UTF-8`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/ptl_ipvp_cmn_cmn006
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "pkv" : "string",
+  "plocation" : "string",
+  "pserialNumber" : "string",
+  "pserverAddress" : "string",
+  "ptn" : "string",
+  "ptoken" : "string",
+  "ptype" : "string",
+  "puser" : "string",
+  "pversion" : "string",
+  "tenantId" : "string"
+}
+----
+
+
+====== 请求 body
+[source,json]
+----
+{ }
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "data" : "object",
+  "errorMessage" : "xxxx",
+  "exception" : "xxxx",
+  "status" : "0",
+  "versionCode" : "1",
+  "versionName" : "4.1.8"
+}
+----
+
+
+[[_getusingpost]]
+==== 获取地区信息接口
+....
+POST /test/get
+....
+
+
+===== 说明
+获取地区信息，可以获得OMC支持的所有地区列表，也可通过GPS定位，传入要查询的对应城市或县、区的名称，返回对应在OMC系统中的locationID。
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|string
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+* `application/json`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/test/get
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"string"
+----
+
+
+
+
+[[_definitions]]
+== 定义
+
+[[_responsemap]]
+=== ResponseMap
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**data** +
+__可选__|**样例** : `"object"`|object
+|**errorMessage** +
+__可选__|**样例** : `"xxxx"`|string
+|**exception** +
+__可选__|**样例** : `"xxxx"`|string
+|**status** +
+__必填__|**样例** : `"0"`|string
+|**versionCode** +
+__必填__|**样例** : `"1"`|string
+|**versionName** +
+__必填__|**样例** : `"4.1.8"`|string
+|===
+
+
+
+
+

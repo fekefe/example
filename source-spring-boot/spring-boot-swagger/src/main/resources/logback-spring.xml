@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<springProperty scope="context" name="logPath" source="logging.path"/>
+
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<target>System.out</target>
+		<encoder>
+			<pattern>%date [%level] [%thread] {%logger{20}}  --  %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FileDebug" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logPath}/boot_mybatis_debug.log</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%date [%level] [%thread] {%logger{20}}  --  %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${logPath}/boot_mybatis_debug.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+			<maxFileSize>50MB</maxFileSize>
+			<totalSizeCap>100MB</totalSizeCap>
+			<maxHistory>90</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+	</appender>
+
+	<appender name="FileInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logPath}/boot_mybatis_info.log</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%date [%level] [%thread] {%logger{20}}  --  %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${logPath}/boot_mybatis_info.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+			<maxFileSize>50MB</maxFileSize>
+			<totalSizeCap>100MB</totalSizeCap>
+			<maxHistory>90</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+
+	<appender name="FileWarn" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logPath}/boot_mybatis_warn.log</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%date [%level] [%thread] {%logger{80}}  %caller{3}  --  %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${logPath}/boot_mybatis_warn.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+			<maxFileSize>50MB</maxFileSize>
+			<totalSizeCap>200MB</totalSizeCap>
+			<maxHistory>90</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+	</appender>
+
+	<appender name="FileError" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logPath}/boot_mybatis_error.log</file>
+		<append>true</append>
+		<encoder>
+			<!--<pattern>%date [%level] [%thread] {%logger{80}}  %caller{3}  &#45;&#45;  %msg%n</pattern>-->
+			<pattern>%date [%level] [%thread] {%logger{80}}  --  %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${logPath}/boot_mybatis_error.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+			<maxFileSize>50MB</maxFileSize>
+			<totalSizeCap>200MB</totalSizeCap>
+			<maxHistory>90</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+	</appender>
+
+
+	<springProfile name="dev,dbg">
+		<appender name="sql" class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<File>${logPath}/boot_mybatis_sql.log</File>
+			<encoder>
+				<pattern>%d [%level] [%thread] %logger{15}:%line %msg%n</pattern>
+			</encoder>
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>${logPath}/boot_mybatis_sql.%d{yyyy-MM-dd}.log</fileNamePattern>
+				<maxHistory>90</maxHistory>
+			</rollingPolicy>
+			<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+				<level>DEBUG</level>
+			</filter>
+		</appender>
+
+		<appender name="sql-queue" class="ch.qos.logback.classic.AsyncAppender">
+			<queueSize>512</queueSize>
+			<appender-ref ref="sql"/>
+		</appender>
+
+		<!-- mybatis loggers -->
+		<logger name="dao" level="DEBUG" additivity="false">
+			<appender-ref ref="sql-queue"/>
+		</logger>
+	</springProfile>
+
+
+	<springProfile name="error">
+		<logger name="org.springframework" level="ERROR" additivity="true" />
+	</springProfile>
+
+	<springProfile name="shopping">
+		<logger name="org.springframework" level="WARN" additivity="true" />
+	</springProfile>
+
+	<springProfile name="deploy">
+		<logger name="org.springframework" level="WARN" additivity="true" />
+	</springProfile>
+
+	<springProfile name="dev">
+		<logger name="org.springframework" level="INFO" additivity="true" />
+	</springProfile>
+
+	<springProfile name="dbg">
+		<logger name="org.springframework" level="INFO" additivity="fasle" />
+		<logger name="org.mongodb" level="INFO" additivity="false" />
+		<logger name="com.netflix" level="INFO" additivity="false" />
+		<logger name="org.apache" level="INFO" additivity="false" />
+		<logger name="springfox.documentation" level="INFO" additivity="false" />
+	</springProfile>
+
+	<springProfile name="error">
+		<root level="ERROR">
+			<appender-ref ref="FileError"/>
+		</root>
+	</springProfile>
+
+	<springProfile name="shopping">
+		<root level="WARN">
+			<appender-ref ref="FileWarn"/>
+			<appender-ref ref="FileError"/>
+		</root>
+	</springProfile>
+
+	<springProfile name="deploy">
+		<root level="INFO">
+			<appender-ref ref="FileInfo" />
+			<appender-ref ref="FileWarn"/>
+			<appender-ref ref="FileError"/>
+		</root>
+	</springProfile>
+
+	<springProfile name="dev">
+		<root level="INFO">
+			<appender-ref ref="FileInfo" />
+			<appender-ref ref="FileWarn"/>
+			<appender-ref ref="FileError"/>
+			<appender-ref ref="Console"/>
+		</root>
+	</springProfile>
+
+	<springProfile name="dbg">
+		<root level="DEBUG">
+			<appender-ref ref="FileDebug" />
+			<appender-ref ref="FileInfo" />
+			<appender-ref ref="FileWarn"/>
+			<appender-ref ref="FileError"/>
+			<appender-ref ref="Console"/>
+		</root>
+	</springProfile>
+
+</configuration>

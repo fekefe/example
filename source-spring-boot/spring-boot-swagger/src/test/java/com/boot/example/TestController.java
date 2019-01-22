@@ -37,6 +37,9 @@ public class TestController {
 				.build()
 				.toFile(outputDirectory);
 		
+		
+		// mvn swagger2markup:convertSwagger2markup
+		// mvn clean process-asciidoc
 	}
 	
 }

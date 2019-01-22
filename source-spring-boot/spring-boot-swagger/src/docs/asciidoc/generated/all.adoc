@@ -33,7 +33,7 @@ __基础路径__ : /
 * 1.1点播相关接口 : 点播相关接口
 * 1.2测试2 : 测试2
 * 1.3测试1 : 测试1
-* 基础公共接口 : 基础公共接口
+* 1.4基础公共接口 : 基础公共接口
 
 
 
@@ -59,7 +59,7 @@ POST /ptl_ipvp_cmn_vod001
 
 ===== 参数
 
-[options="header", cols=".^2,.^3,.^9,.^4"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
 |===
 |类型|名称|说明|类型
 |**Query**|**pkv** +
@@ -89,7 +89,7 @@ __必填__|私有参数|integer (int64)
 
 ===== 响应
 
-[options="header", cols=".^2,.^14,.^4"]
+[options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP代码|说明|类型
 |**200**|OK|<<_responsemap,ResponseMap>>
@@ -115,24 +115,6 @@ __必填__|私有参数|integer (int64)
 ====== 请求 path
 ----
 /ptl_ipvp_cmn_vod001
-----
-
-
-====== 请求 query
-[source,json]
-----
-{
-  "pkv" : "string",
-  "plocation" : "string",
-  "pserialNumber" : "string",
-  "pserverAddress" : "string",
-  "ptn" : "string",
-  "ptoken" : "string",
-  "ptype" : "string",
-  "puser" : "string",
-  "pversion" : "string",
-  "tenantId" : "string"
-}
 ----
 
 
@@ -177,7 +159,7 @@ POST /ptl_ipvp_cmn_2
 
 ===== 参数
 
-[options="header", cols=".^2,.^3,.^9,.^4"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
 |===
 |类型|名称|说明|类型
 |**Query**|**pkv** +
@@ -207,7 +189,7 @@ __可选__|私有参数|integer (int64)
 
 ===== 响应
 
-[options="header", cols=".^2,.^14,.^4"]
+[options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP代码|说明|类型
 |**200**|OK|<<_responsemap,ResponseMap>>
@@ -233,24 +215,6 @@ __可选__|私有参数|integer (int64)
 ====== 请求 path
 ----
 /ptl_ipvp_cmn_2
-----
-
-
-====== 请求 query
-[source,json]
-----
-{
-  "pkv" : "string",
-  "plocation" : "string",
-  "pserialNumber" : "string",
-  "pserverAddress" : "string",
-  "ptn" : "string",
-  "ptoken" : "string",
-  "ptype" : "string",
-  "puser" : "string",
-  "pversion" : "string",
-  "tenantId" : "string"
-}
 ----
 
 
@@ -295,7 +259,7 @@ POST /ptl_ipvp_cmn_3
 
 ===== 参数
 
-[options="header", cols=".^2,.^3,.^9,.^4"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
 |===
 |类型|名称|说明|类型
 |**Query**|**pkv** +
@@ -325,7 +289,7 @@ __可选__|私有参数|integer (int64)
 
 ===== 响应
 
-[options="header", cols=".^2,.^14,.^4"]
+[options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP代码|说明|类型
 |**200**|OK|<<_responsemap,ResponseMap>>
@@ -354,24 +318,6 @@ __可选__|私有参数|integer (int64)
 ----
 
 
-====== 请求 query
-[source,json]
-----
-{
-  "pkv" : "string",
-  "plocation" : "string",
-  "pserialNumber" : "string",
-  "pserverAddress" : "string",
-  "ptn" : "string",
-  "ptoken" : "string",
-  "ptype" : "string",
-  "puser" : "string",
-  "pversion" : "string",
-  "tenantId" : "string"
-}
-----
-
-
 ====== 请求 body
 [source,json]
 ----
@@ -395,13 +341,13 @@ __可选__|私有参数|integer (int64)
 ----
 
 
-[[_dbeaed9f2e2a29b42c6cbbaca7d2221b]]
-=== 基础公共接口
+[[_90306ce5fc41de17b70d11c90cd91c9f]]
+=== 1.4基础公共接口
 基础公共接口
 
 
-[[_ptl_ipvp_cmn_cmn001usingpost]]
-==== 删除直播频道分类关系
+[[_ptl_ipvp_cmn_cmn002usingpost]]
+==== 2.删除直播频道分类关系
 ....
 POST /ptl_ipvp_cmn_cmn001
 ....
@@ -413,7 +359,7 @@ POST /ptl_ipvp_cmn_cmn001
 
 ===== 参数
 
-[options="header", cols=".^2,.^3,.^9,.^4"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
 |===
 |类型|名称|说明|类型
 |**Query**|**pkv** +
@@ -443,7 +389,7 @@ __可选__|私有参数|integer (int64)
 
 ===== 响应
 
-[options="header", cols=".^2,.^14,.^4"]
+[options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP代码|说明|类型
 |**200**|OK|<<_responsemap,ResponseMap>>
@@ -472,24 +418,6 @@ __可选__|私有参数|integer (int64)
 ----
 
 
-====== 请求 query
-[source,json]
-----
-{
-  "pkv" : "string",
-  "plocation" : "string",
-  "pserialNumber" : "string",
-  "pserverAddress" : "string",
-  "ptn" : "string",
-  "ptoken" : "string",
-  "ptype" : "string",
-  "puser" : "string",
-  "pversion" : "string",
-  "tenantId" : "string"
-}
-----
-
-
 ====== 请求 body
 [source,json]
 ----
@@ -513,8 +441,8 @@ __可选__|私有参数|integer (int64)
 ----
 
 
-[[_ptl_ipvp_cmn_cmn005usingpost]]
-==== 获取地区信息接口
+[[_ptl_ipvp_cmn_cmn001usingpost]]
+==== 1.获取地区信息接口
 ....
 POST /ptl_ipvp_cmn_cmn005
 ....
@@ -526,7 +454,7 @@ POST /ptl_ipvp_cmn_cmn005
 
 ===== 参数
 
-[options="header", cols=".^2,.^3,.^9,.^4"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
 |===
 |类型|名称|说明|类型
 |**Query**|**pkv** +
@@ -556,7 +484,7 @@ __可选__|私有参数|integer (int64)
 
 ===== 响应
 
-[options="header", cols=".^2,.^14,.^4"]
+[options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP代码|说明|类型
 |**200**|OK|<<_responsemap,ResponseMap>>
@@ -585,24 +513,6 @@ __可选__|私有参数|integer (int64)
 ----
 
 
-====== 请求 query
-[source,json]
-----
-{
-  "pkv" : "string",
-  "plocation" : "string",
-  "pserialNumber" : "string",
-  "pserverAddress" : "string",
-  "ptn" : "string",
-  "ptoken" : "string",
-  "ptype" : "string",
-  "puser" : "string",
-  "pversion" : "string",
-  "tenantId" : "string"
-}
-----
-
-
 ====== 请求 body
 [source,json]
 ----
@@ -627,7 +537,7 @@ __可选__|私有参数|integer (int64)
 
 
 [[_ptl_ipvp_cmn_cmn006usingpost]]
-==== 获取地区信息接口
+==== 3.获取地区信息接口
 ....
 POST /ptl_ipvp_cmn_cmn006
 ....
@@ -639,7 +549,7 @@ POST /ptl_ipvp_cmn_cmn006
 
 ===== 参数
 
-[options="header", cols=".^2,.^3,.^9,.^4"]
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
 |===
 |类型|名称|说明|类型
 |**Query**|**pkv** +
@@ -669,7 +579,7 @@ __可选__|私有参数|integer (int64)
 
 ===== 响应
 
-[options="header", cols=".^2,.^14,.^4"]
+[options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP代码|说明|类型
 |**200**|OK|<<_responsemap,ResponseMap>>
@@ -695,24 +605,6 @@ __可选__|私有参数|integer (int64)
 ====== 请求 path
 ----
 /ptl_ipvp_cmn_cmn006
-----
-
-
-====== 请求 query
-[source,json]
-----
-{
-  "pkv" : "string",
-  "plocation" : "string",
-  "pserialNumber" : "string",
-  "pserverAddress" : "string",
-  "ptn" : "string",
-  "ptoken" : "string",
-  "ptype" : "string",
-  "puser" : "string",
-  "pversion" : "string",
-  "tenantId" : "string"
-}
 ----
 
 
@@ -752,7 +644,7 @@ POST /test/get
 
 ===== 响应
 
-[options="header", cols=".^2,.^14,.^4"]
+[options="header", cols=".^2a,.^14a,.^4a"]
 |===
 |HTTP代码|说明|类型
 |**200**|OK|string
@@ -770,7 +662,7 @@ POST /test/get
 
 ===== 生成
 
-* `*/*`
+* `\*/*`
 * `application/json`
 
 
@@ -799,7 +691,7 @@ POST /test/get
 [[_responsemap]]
 === ResponseMap
 
-[options="header", cols=".^3,.^11,.^4"]
+[options="header", cols=".^3a,.^11a,.^4a"]
 |===
 |名称|说明|类型
 |**data** +
